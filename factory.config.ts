@@ -35,10 +35,10 @@ export function defineFactoryConfig(config: FactoryConfig): FactoryConfig {
 
 export default defineFactoryConfig({
 	repos: {
-		"render-examples/render-factory-example-target": {
+		"starmorph/software-factory": {
 			baseBranch: "main",
 			install: "npm ci",
-			verify: ["npm run build", "npm test"],
+			verify: ["npm run lint", "npm run typecheck && npm test"],
 		},
 	},
 	labels: {
